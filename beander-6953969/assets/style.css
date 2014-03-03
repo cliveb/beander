@@ -1,0 +1,164 @@
+body {
+  font-size: 16px;
+  font-family: Helvetica,Arial, sans-serif;
+  margin:0;
+  color: #333;
+}
+.score {
+  width: 20%;
+  display: inline-block;
+}
+.score b {
+  margin: .2rem 0;
+  display:inline-block;
+}
+.value {
+  font-weight: 900;
+/*  border: 1px solid #cfcfcf;
+*/  font-size: 1.75rem;
+  display:inline-block;
+  padding: .5rem;
+  background: white;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+}
+
+.info {
+  display:inline-block;
+  width: 100%;
+  background: #ddd;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.card {
+  display: inline-block;
+  width: 240px;
+  padding: 10px;
+  margin: 1.5rem 10px;
+}
+
+article {
+  width: 50%;
+  padding: 0 10px;
+}
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
+}
+
+h5 { 
+  font-size: 1.16667rem;
+  margin-bottom: 1.41428rem;
+}
+h4 {
+  font-size: 1.3333333rem;
+  margin-bottom: 1.2375rem;
+}
+h3 { 
+  font-size: 2rem;
+  margin-bottom: 0.825rem;
+}
+h2 {
+  font-size: 2.66667rem;
+  margin-bottom: 0.61875rem;
+}
+h1 {
+  font-size: 3.333333rem;
+  margin-bottom: 0.495rem;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+.right {
+  float: right;
+}
+
+section {
+  max-width: 1000px;
+  margin:3rem auto;
+}
+section:after {
+  height: 6rem;
+  display:block;
+  content:"";
+}
+.carousel {
+  max-width:940px;
+  height: 25rem;
+  background: #ccc;
+  margin: 3rem auto;
+  overflow: hidden;
+}
+.slide {
+  max-width: 940px;
+  height: 25rem;
+}
+
+.price {
+  display: inline-block;
+  width:75%;
+}
+.price p {
+  margin: 0;
+  padding: .1rem 0;
+  font-size: .85rem;
+}
+.price em {
+  font-weight: 100;
+}
+.info h6 {
+  margin: .2rem 0;
+}
+.info b {
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+nav {
+  height: 4rem;
+  background: #ddd;
+  border: 1px solid #cfcfcf;
+}
+.navitem {
+  display: inline-block;
+  padding: 0 1rem;
+  height: 4rem;
+  line-height:  4rem;
+  border-right: 1px solid #cfcfcf;
+  min-width: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+nav a:visited {
+  color: #333;
+}
+footer {
+  background: #ccc;
+  height: 6rem;
+  border: 1px solid #cfcfcf;
+}
+
+@media (max-width: 959px) {
+  section {
+    max-width: 640px;
+  }
+}
+@media (max-width: 639px) {
+  article {
+    display: block;
+    margin: 1rem auto;
+    max-width: 400px;
+  }
+  section,.carousel {
+    margin: 0;
+  }
+}

@@ -1,0 +1,10 @@
+{% assign page = pages.frontpage %}
+<div class="carousel">
+<div class="slide"></div>
+<div class="slide" style="background:green;"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+</div>
+{% assign collection = collections.frontpage %}
+{% for product in collection.products | limit: 9 %}{% include 'product-loop' %}{% endfor %}
+

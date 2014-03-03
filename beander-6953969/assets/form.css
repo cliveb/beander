@@ -1,0 +1,21 @@
+input[type='submit'] {
+  border: none;
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+.product.description {
+  max-width: 50%;
+  display:inline-block;
+}
+section {
+  min-height: 100%;
+  margin-bottom: -6rem;
+}
+img {
+  float:left;
+}
+html,body {
+  height: 100%;
+}
+

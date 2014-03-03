@@ -1,0 +1,5 @@
+{% paginate collection.products by 9 %}{% for product in collection.products %}{% include 'product-loop' %}{% endfor %}
+{% if paginate.pages > 1 %}
+  {{paginate | default_pagination }}
+{% endif %}
+{% endpaginate %}
