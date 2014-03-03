@@ -4,14 +4,22 @@ body {
   margin:0;
   color: #333;
 }
-
 .score {
+  width: 20%;
+}
+.score b {
+  margin: .2rem 0;
+  display:inline-block;
+}
+.value {
   font-weight: 900;
-  border: 1px solid #999;
-  font-size: 2rem;
+  border: 1px solid #cfcfcf;
+  font-size: 1.75rem;
   display:inline-block;
   padding: .5rem;
   background: white;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
 }
 
 h6 {
@@ -45,37 +53,58 @@ h1 {
   padding: 1.5rem;
   border: 1px solid #cfcfcf
 }
-
+.right {
+  float: right;
+}
 img {  
   width: 300px;
   height: 300px;
   background: #ccc;
 }
 section {
-  width: 960px;
+  max-width: 960px;
+  margin:3rem auto;
 }
-
+.carousel {
+  max-width:940px;
+  height: 25rem;
+  background: #ccc;
+  margin: 3rem auto;
+  overflow: hidden;
+}
+.slide {
+  max-width: 940px;
+  height: 25rem;
+}
 article {
   display: inline-block;
   width: 300px;
-  margin: 0 10px ;
+  margin: 1.5rem 10px;
 }
 
 .price {
   display: inline-block;
   width:75%;
 }
-.price span {
-  display:inline-block;
-  padding: .25rem 0;
+.price p {
+  margin: 0;
+  padding: .1rem 0;
+  font-size: .85rem;
 }
 .price em {
   font-weight: 100;
 }
+.info h6 {
+  margin: .2rem 0;
+}
+.info b {
+  text-transform: uppercase;
+  font-size: .75rem;
+}
 nav {
   height: 4rem;
   background: #ddd;
-  margin: 1px solid #cfcfcf;
+  border: 1px solid #cfcfcf;
 }
 .navitem {
   display: inline-block;
@@ -92,4 +121,25 @@ nav a {
 }
 nav a:visited {
   color: #333;
+}
+footer {
+  background: #ccc;
+  height: 6rem;
+  border: 1px solid #cfcfcf;
+}
+
+@media (max-width: 959px) {
+  section {
+    max-width: 640px;
+  }
+}
+@media (max-width: 639px) {
+  article {
+    display: block;
+    margin: 1rem auto;
+    max-width: 400px;
+  }
+  section,.carousel {
+    margin: 0;
+  }
 }
