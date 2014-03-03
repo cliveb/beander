@@ -1,0 +1,95 @@
+body {
+  font-size: 16px;
+  font-family: Helvetica,Arial, sans-serif;
+  margin:0;
+  color: #333;
+}
+
+.score {
+  font-weight: 900;
+  border: 1px solid #999;
+  font-size: 2rem;
+  display:inline-block;
+  padding: .5rem;
+  background: white;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
+}
+
+h5 { 
+  font-size: 1.16667rem;
+  margin-bottom: 1.41428rem;
+}
+h4 {
+  font-size: 1.3333333rem;
+  margin-bottom: 1.2375rem;
+}
+h3 { 
+  font-size: 2rem;
+  margin-bottom: 0.825rem;
+}
+h2 {
+  font-size: 2.66667rem;
+  margin-bottom: 0.61875rem;
+}
+h1 {
+  font-size: 3.333333rem;
+  margin-bottom: 0.495rem;
+}
+
+.info {
+  background: #ddd;
+  padding: 1.5rem;
+  border: 1px solid #cfcfcf
+}
+
+img {  
+  width: 300px;
+  height: 300px;
+  background: #ccc;
+}
+section {
+  width: 960px;
+}
+
+article {
+  display: inline-block;
+  width: 300px;
+  margin: 0 10px ;
+}
+
+.price {
+  display: inline-block;
+  width:75%;
+}
+.price span {
+  display:inline-block;
+  padding: .25rem 0;
+}
+.price em {
+  font-weight: 100;
+}
+nav {
+  height: 4rem;
+  background: #ddd;
+  margin: 1px solid #cfcfcf;
+}
+.navitem {
+  display: inline-block;
+  padding: 0 1rem;
+  height: 4rem;
+  line-height:  4rem;
+  border-right: 1px solid #cfcfcf;
+  min-width: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:visited {
+  color: #333;
+}
