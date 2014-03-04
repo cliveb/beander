@@ -1,18 +1,20 @@
 input[type='submit'] {
-  border: none;
   padding: .5rem;
+  border: none;
   border-radius: .25rem;
+  background:#4c2e2f;
+  color:#d3a03a;
 }
 
 .product.description {
-  max-width: 50%;
   display:inline-block;
-  padding-left:2rem;
   box-sizing: border-box;
+  padding-left:2rem;
+  max-width: 50%;
 }
 section {
-  min-height: 100%;
   margin-bottom: -6rem;
+  min-height: 100%;
 }
 img {
   float:left;
@@ -21,3 +23,62 @@ html,body {
   height: 100%;
 }
 
+.score {
+  display: inline-block;
+  width: 20%;
+}
+.score b {
+  display:inline-block;
+  margin: .2rem 0;
+}
+.value {
+  display:inline-block;
+  padding: .5rem;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+  background: white;
+  font-weight: 900;
+/*  border: 1px solid #cfcfcf;
+*/  font-size: 1.75rem;
+}
+
+.info {
+  display:inline-block;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  /*border: 1px solid #d3a03a;*/
+  background: #4c2e2f;
+}
+
+.card {
+  display: inline-block;
+  margin: 1.5rem 46px;
+  padding: 0;
+  width: 240px;
+}
+
+article {
+  padding: 0 10px;
+  width: 50%;
+}
+
+.price {
+  display: inline-block;
+  width:75%;
+}
+.price p {
+  margin: 0;
+  padding: .1rem 0;
+  font-size: .85rem;
+}
+.price em {
+  font-weight: 100;
+}
+.info h6 {
+  margin: .2rem 0;
+}
+.info b {
+  text-transform: uppercase;
+  font-size: .75rem;
+}

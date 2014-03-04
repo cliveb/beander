@@ -10,11 +10,11 @@
 </head>
 <body>
   <nav>
-    <section>
+
       {% for link in linklists.main-menu.links %}
       <div class="navitem {%if link.active%} current {% endif %}"><a href="{{link.url}}">{{link.title}}</a></div>
       {% endfor %}
-    <section>
+
   </nav>
   <div class="logo">
     {{'logo.png' | asset_url | img_tag: 'Logo' }}

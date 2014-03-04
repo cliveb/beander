@@ -1,10 +1,10 @@
-<article class="card">
+<article class="card bright">
  <img src="{{product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}">
  <div class="info">
    <div class="price">
-     <a href="{{product.url | within: collection }}"><h6>{{product.title}}</h6></a>
+     <a href="{{product.url | within: collection }}"><h6 class="bright">{{product.title}}</h6></a>
      <p><b>{{product.vendor}}</b></p>
-     <p>{{product.price | money }}<em>per lb</em></p>
+     <p>{{product.price | money }} <em>per lb</em></p>
    </div><div class="score right">
    <b>score</b>
    <div class="value">85</div>
