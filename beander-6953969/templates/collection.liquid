@@ -1,5 +1,16 @@
-{% paginate collection.products by 9 %}{% for product in collection.products %}{% include 'product-loop' %}{% endfor %}
+{% paginate collection.products by 8 %}
+{% if collection.featured_image %}
+ <img src="{{collection.featured_image.src | product_image_url: 'large' }}" alt="{{ collection.featured_image.alt | escape }}">
+ {% endif%}
+{% if collection.description.size > 0 %}
+  <div class="rte">
+    {{collection.description}}
+  </div>
+{% endif %}
+{% for product in collection.products %}{% include 'product-loop' %}{% endfor %}
 {% if paginate.pages > 1 %}
+  <div class="pages">
   {{paginate | default_pagination }}
+  </div>
 {% endif %}
 {% endpaginate %}

@@ -1,51 +1,45 @@
 {% if cart.item_count > 0 %}
 <form action="/cart" method="post" >
-<table>
-<thead>
-  <tr>
-    <th>Item</th>
-    <th>Name</th>
-    <th>Vendor</th>
-    <th>Price</th>
-    <th>Quantity</th>
-    <th>Total</th>
-    <th>Remove</th>
-  </tr>
-</thead>
-<tbody>
-{% for item in cart.items %}
-<tr>
-  <td> 
-    <a href="{{item.product.url | within: collections.all }}">
-    <img src="{{item.product.featured_image.src | product_img_url: 'small' }}" alt="{{item.title | escape}}">
-    </a>
-  </td>
-  <td>
-    <a href="{{item.product.url | within: collections.all}}">{{item.title | escape}}</a>
-  </td>
-  <td>
-    {{item.vendor}}
-  </td>
-  <td>
-    {{item.price | money}}
-  </td>
-  <td>
-    {{item.quantity}}
-  </td>
-  <td>
-    {{item.line_price | money}}
-  </td>
-  <td>
-    <a href="/cart/change?line={{forloop.index}}&quantity=0">Remove</a>
-  </td>
-  </tr>
-{% endfor %}
-</tbody>
-</table>
-<h3>Subtotal <em> {{cart.total_price | money }} </em></h3>
-<a href="{{collection_url}}">Continue Shopping</a>
-<input type="submit" name="update" value="Update Cart">
-<input type="submit" name="checkout" value="Check out">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Vendor</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart.items %}
+      <tr>
+        <td> 
+          <a href="{{item.product.url | within: collections.all }}">
+            <img src="{{item.product.featured_image.src | product_img_url: 'thumb' }}" alt="{{item.title | escape}}">
+          </a>
+        </td>
+        <td>
+          <a href="{{item.product.url | within: collections.all}}">{{item.title | escape}}</a>
+        </td>
+        <td>{{item.vendor}}</td>
+        <td>{{item.price | money}}</td>
+        <td> <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" /></td>
+        <td>{{item.line_price | money}}</td>
+        <td>
+          <a href="/cart/change?line={{forloop.index}}&quantity=0">Remove</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <span class="subtotal">Subtotal: <em> {{cart.total_price | money }} </em></span>
+  <div class="links">
+    <a href="{{collection_url}}">Continue Shopping</a>
+    <input type="submit" name="update" value="Update Cart">
+    <input type="submit" name="checkout" value="Check out">
+  </div>
 </form>
 {% else %}
 your cart is empty.

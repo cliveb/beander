@@ -1,10 +1,27 @@
 {% assign page = pages.frontpage %}
+<script> 
+  window.onload  = function(){
+    var el = document.getElementsByClassName("slide-container")[0];
+    var count = el.children.length;
+    var current = 0;
+    var dir = 1;
+    setInterval(function() {
+      if(current == count -1 || (current == 0 && dir == -1)){ 
+        dir = dir * -1;
+      }
+      current += dir;
+      el.style.webkitTransform = "translate3d("+current*-1000+"px,0,0)";
+    },10000);
+  }
+</script>
 <div class="carousel">
-<div class="slide"></div>
-<div class="slide" style="background:green;"></div>
-<div class="slide"></div>
-<div class="slide"></div>
+  <ul class="slide-container">
+    <li class="slide" style="background:green;"><a href="/products/mzuzu-sh5417"> {{'mzuzu.jpg' | asset_url | img_tag: 'MZUZU AA/AAA'}}</a></li>
+    <li class="slide" style="background:green;"><a href="/products/mzuzu-sh5417"> {{'mzuzu.jpg' | asset_url | img_tag: 'MZUZU AA/AAA'}}</a></li>
+    <li class="slide" style="background:green;"><a href="/products/mzuzu-sh5417"> {{'mzuzu.jpg' | asset_url | img_tag: 'MZUZU AA/AAA'}}</a></li>
+    <li class="slide" style="background:green;"><a href="/products/mzuzu-sh5417"> {{'mzuzu.jpg' | asset_url | img_tag: 'MZUZU AA/AAA'}}</a></li>
+  </ul>
 </div>
 {% assign collection = collections.frontpage %}
-{% for product in collection.products | limit: 9 %}{% include 'product-loop' %}{% endfor %}
+{% for product in collection.products | limit:8 %}{% include 'product-loop' %}{% endfor %}
 

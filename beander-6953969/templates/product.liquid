@@ -1,8 +1,10 @@
 <img src="{{product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-<article class="product description">
-  <h3>{{product.title}}</h3>
-  <h4>{{product.price | money}}</h4>
-    <form action="/cart/add" method="post">
+<article class="product">
+  <div class="details">
+    <h3>{{product.title}}</h3>
+    <span><strong>{{product.price | money}}</strong> for a bag of <b>{{product.variants.first.weight | weight_with_unit }}</b></span>
+  </div>
+  <form action="/cart/add" method="post">
     {% if product.variants.size == 1 %}
     {% for variant in product.variants %}
     <input name="id" type="hidden" value="{{variant.id}}">
@@ -10,5 +12,5 @@
     {% endif %}
     <input type="submit" name="add" value="Purchase">
   </form>
-  <p>{{product.description}}</p>
+  {{product.description}}
 </article>

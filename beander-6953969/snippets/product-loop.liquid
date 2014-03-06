@@ -1,13 +1,15 @@
-<article class="card bright">
- <img src="{{product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}">
+<article class="card">
+<a href="{{product.url | within: collection }}">
+ <img src="{{product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
  <div class="info">
    <div class="price">
-     <a href="{{product.url | within: collection }}"><h6 class="bright">{{product.title}}</h6></a>
-     <p><b>{{product.vendor}}</b></p>
-     <p>{{product.price | money }} <em>per lb</em></p>
+     <h6 class="ticker">{{product.title}}</h6>
+     <p><b class="ticker">{{product.vendor}}</b></p>
+     <span class="ticker">{{product.price | money }} <em>per bag</em></span>
    </div><div class="score right">
    <b>score</b>
-   <div class="value">85</div>
+   <div class="value">{{product.variants.first.option2}}</div>
  </div>     
 </div>
+</a>
 </article>
